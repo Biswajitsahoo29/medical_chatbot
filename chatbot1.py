@@ -10,15 +10,15 @@ from sklearn.metrics.pairwise import cosine_similarity
 from gtts import gTTS
 import tempfile
 
-# ✅ Load AI Models
+# Load AI Models
 sentiment_analyzer = pipeline("sentiment-analysis")
 embedder = SentenceTransformer('sentence-transformers/all-MiniLM-L6-v2')
 
-# ✅ Load DialoGPT for Chatbot
+# Load DialoGPT for Chatbot
 tokenizer = AutoTokenizer.from_pretrained("microsoft/DialoGPT-medium")
 model = AutoModelForCausalLM.from_pretrained("microsoft/DialoGPT-medium")
 
-# ✅ Predefined Mental Health Responses
+# Predefined Mental Health Responses
 mental_health_responses = {
     "anxious": "Take deep breaths. I'm here for you. Try grounding techniques.",
     "stressed": "Step away for a bit, try meditation or deep breathing.",
